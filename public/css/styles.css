@@ -1,0 +1,115 @@
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.navbar-custom {
+    background: linear-gradient(135deg, #003865 0%, #004d7a 100%);
+    box-shadow: 0 4px 20px rgba(0, 56, 101, 0.15);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: translateY(-2px);
+}
+
+.nav-link {
+    position: relative;
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #00b0b9;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link:hover {
+    color: #00b0b9 !important;
+    transform: translateY(-2px);
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, #00b0b9 0%, #00d4d9 100%);
+    border: none;
+    padding: 0.6rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 176, 185, 0.3);
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.btn-accent:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 176, 185, 0.4);
+    background: linear-gradient(135deg, #00d4d9 0%, #00b0b9 100%);
+    color: white;
+}
+
+.btn-accent:active {
+    transform: translateY(-1px);
+}
+
+.navbar-toggler {
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #00b0b9;
+}
+
+.navbar-toggler-icon {
+    background-image: url("/images/logo.png");
+}
+
+.logo-img {
+    height: 45px;
+    margin-right: 12px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover .logo-img {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.navbar-nav {
+    flex: 1;
+    justify-content: center;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 1rem 0;
+    }
+
+    .btn-accent {
+        margin-top: 1rem;
+        width: 100%;
+    }
+}

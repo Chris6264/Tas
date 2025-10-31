@@ -1,7 +1,6 @@
 <?php
 
+use App\Http\Controllers\TasController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[TasController::class,'tas_inicio']) -> name('tas_inicio');
