@@ -26,13 +26,10 @@
             <div class="collapse navbar-collapse" id="navbarMenu">
                 <ul class="navbar-nav mx-auto justify-content-center mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link text-white active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link text-white active" aria-current="page" href="{{route('tas_inicio')}}">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#">Subir Receta</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">Acerca De</a>
                     </li>
                 </ul>
 
@@ -47,6 +44,8 @@
         @yield('content')
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('js/navbar.js') }}"></script>
+
 </body>
 
 </html>
